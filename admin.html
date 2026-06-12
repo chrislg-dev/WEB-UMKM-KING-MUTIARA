@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin - Kelola Produk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <h1>Panel Admin UMKM - Kelola Produk</h1>
+
+        <!-- 1. FORM TAMBAH PRODUK -->
+        <div class="admin-card">
+            <h2 id="form-title">Tambah Produk Baru</h2> 
+            
+            <form id="product-form">
+                <input type="hidden" id="form-id"> 
+
+                <div class="form-group">
+                    <label>Nama Produk:</label>
+                    <input type="text" id="form-name" required placeholder="Contoh: Granit Putih 60x60">
+                </div>
+
+                <div class="form-group">
+                    <label>Kategori:</label>
+                    <select id="form-category" required>
+                        <option value="">-- Pilih Kategori --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Harga (Rupiah):</label>
+                    <input type="number" id="form-price" required placeholder="Contoh: 150000">
+                </div>
+
+                <div class="form-group">
+                    <label>Nama File Gambar:</label>
+                    <input type="text" id="form-image" placeholder="Contoh: granit.jpg">
+                </div>
+
+                <button type="submit" id="btn-submit" class="btn-submit">Simpan Produk</button> 
+            </form>
+        </div>
+
+        <!-- 2. TABEL DAFTAR PRODUK -->
+        <div class="admin-card">
+            <h2>Daftar Produk Saat Ini</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Kode (SKU)</th>
+                        <th>Gambar</th>
+                        <th>Nama Produk</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-table-body">
+                    <!-- Data ditarik otomatis dari server.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Hubungkan ke javascript admin khusus -->
+    <script src="admin.js"></script>
+</body>
+</html>
